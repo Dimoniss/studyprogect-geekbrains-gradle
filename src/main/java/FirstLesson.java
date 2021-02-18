@@ -1,9 +1,11 @@
 
 
 public class FirstLesson {
+
+    //--------------------------------------------------Task 1
     public static void main(String[] args) {
 
-        // ---------------------------------------------Task 1
+        // ---------------------------------------------Task 2
         // from -128 to 127 and takes 1 byte
         byte b = 111;
 
@@ -33,19 +35,30 @@ public class FirstLesson {
         System.out.println(evaluatingExpression(55.22f, 45.85f, 10.9f, 5000.3f));
 
         System.out.println(rangeOfTwoNumbers(5, 5));
+
+        numberPolarityCheck(-5455);
+        numberPolarityCheck(5656656);
+        numberPolarityCheck(0);
     }
-    //----------------------------------------------------Task 2
+    //----------------------------------------------------Task 3
     //method that evaluates the expression a * (b + (c / d)) and returns the result
     private static float evaluatingExpression(float a, float b, float c, float d){
         return a * (b + (c / d));
     }
 
-    //-----------------------------------------------------Task 3
+    //----------------------------------------------------Task 4
     //calculating a range of sum of numbers
     private static boolean rangeOfTwoNumbers(int a, int b) {
         int sum = a + b;
         if (sum >= 10 && sum <= 20) return true;
         return false;
+    }
+
+    //----------------------------------------------------Task 5
+    //whether the number was passed positive or negative.
+    private static void numberPolarityCheck (long number) {
+        if (number >= 0) System.out.println("number " + number + " is positive");
+        else System.out.println("number " + number + " is negative");
     }
 }
 
