@@ -43,7 +43,21 @@ public class FirstLesson {
         numberPolarityCheck(0);
 
         splitTasks(6);
+        System.out.println(numberPolarityCheckBoolean(-5455));
+        System.out.println(numberPolarityCheckBoolean(5656656));
+        System.out.println(numberPolarityCheckBoolean(0));
+
+        splitTasks(7);
         greetingByName("Андрей");
+
+        splitTasks(8);
+        checkLeapYear(1200);
+        checkLeapYear(1100);
+        checkLeapYear(2020);
+        checkLeapYear(2021);
+        checkLeapYear(2022);
+        checkLeapYear(2023);
+
 
     }
     //----------------------------------------------------Task 3
@@ -72,14 +86,30 @@ public class FirstLesson {
     //and return false if it is positive.
     private static boolean numberPolarityCheckBoolean (long number) {
         if (number <= 0 ) return true;
-        return false;
+        else return false;
     }
 
     //----------------------------------------------------Task 7
+    //a method that is passed a name string as a parameter. The method should print a welcome message to the console
     private static void greetingByName (String name) {
         System.out.println("Привет, " + name + "!");
     }
 
+    //----------------------------------------------------Task 8
+    //a method that determines if the year is a leap year and prints a message to the console.
+    private static void checkLeapYear(int year) {
+        if (year %100==0 && year %400 ==0 )
+            System.out.println(year + " is leap year");
+
+        else if (year % 4 == 0 && year % 100 > 0)
+            System.out.println(year + " is leap year");
+
+        else if (year % 100 == 0)
+            System.out.println(year + " is not leap year");
+
+        else
+            System.out.println(year + " is not leap year");
+    }
 
 
     public static void splitTasks (int numberTusk) {
