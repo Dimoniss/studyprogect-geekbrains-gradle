@@ -3,6 +3,7 @@
 public class FirstLesson {
     public static void main(String[] args) {
 
+        // ---------------------------------------------Task 1
         // from -128 to 127 and takes 1 byte
         byte b = 111;
 
@@ -28,5 +29,17 @@ public class FirstLesson {
         char c = 43;
         System.out.println(c);
 
+
+        //------------------------------------------------Task 2
+        System.out.println(evaluatingExpression(55.22f, 45.85f, 10.9f, 5000.3f));
+
+
+    }
+
+    //method that evaluates the expression a * (b + (c / d)) and returns the result
+    private static float evaluatingExpression(float a, float b, float c, float d){
+        return a * (b + (c / d));
     }
 }
+
+
