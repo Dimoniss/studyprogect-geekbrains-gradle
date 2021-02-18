@@ -31,14 +31,20 @@ public class FirstLesson {
         char c = 43;
         System.out.println(c);
 
-
+        splitTasks(3);
         System.out.println(evaluatingExpression(55.22f, 45.85f, 10.9f, 5000.3f));
 
+        splitTasks(4);
         System.out.println(rangeOfTwoNumbers(5, 5));
 
+        splitTasks(5);
         numberPolarityCheck(-5455);
         numberPolarityCheck(5656656);
         numberPolarityCheck(0);
+
+        splitTasks(6);
+
+
     }
     //----------------------------------------------------Task 3
     //method that evaluates the expression a * (b + (c / d)) and returns the result
@@ -60,6 +66,23 @@ public class FirstLesson {
         if (number >= 0) System.out.println("number " + number + " is positive");
         else System.out.println("number " + number + " is negative");
     }
+
+    //----------------------------------------------------Task 6
+    //a method that is passed an integer as a parameter. The method should return true if the number is negative,
+    //and return false if it is positive.
+    private static boolean numberPolarityCheckBoolean (long number) {
+        if (number <= 0 ) return true;
+        return false;
+    }
+
+
+
+
+    public static void splitTasks (int numberTusk) {
+        System.out.println("------------- Task # " + numberTusk);
+    }
+
+
 }
 
 
