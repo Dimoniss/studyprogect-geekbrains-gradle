@@ -30,15 +30,22 @@ public class FirstLesson {
         System.out.println(c);
 
 
-        //------------------------------------------------Task 2
         System.out.println(evaluatingExpression(55.22f, 45.85f, 10.9f, 5000.3f));
 
-
+        System.out.println(rangeOfTwoNumbers(5, 5));
     }
-
+    //----------------------------------------------------Task 2
     //method that evaluates the expression a * (b + (c / d)) and returns the result
     private static float evaluatingExpression(float a, float b, float c, float d){
         return a * (b + (c / d));
+    }
+
+    //-----------------------------------------------------Task 3
+    //calculating a range of sum of numbers
+    private static boolean rangeOfTwoNumbers(int a, int b) {
+        int sum = a + b;
+        if (sum >= 10 && sum <= 20) return true;
+        return false;
     }
 }
 
