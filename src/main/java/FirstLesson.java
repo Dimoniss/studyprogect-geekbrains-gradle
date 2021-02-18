@@ -43,7 +43,7 @@ public class FirstLesson {
         numberPolarityCheck(0);
 
         splitTasks(6);
-
+        greetingByName("Андрей");
 
     }
     //----------------------------------------------------Task 3
@@ -75,6 +75,10 @@ public class FirstLesson {
         return false;
     }
 
+    //----------------------------------------------------Task 7
+    private static void greetingByName (String name) {
+        System.out.println("Привет, " + name + "!");
+    }
 
 
 
