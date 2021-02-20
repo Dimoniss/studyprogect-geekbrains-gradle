@@ -17,7 +17,7 @@ public class SecondLesson {
         System.out.println(Arrays.toString(array));
 
         //--------------------Task 2
-        test
+        //test
 
     }
 }
