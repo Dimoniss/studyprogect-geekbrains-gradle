@@ -70,8 +70,7 @@ public class FirstLesson {
     //calculating a range of sum of numbers
     private static boolean rangeOfTwoNumbers(int a, int b) {
         int sum = a + b;
-        if (sum >= 10 && sum <= 20) return true;
-        return false;
+        return sum >= 10 && sum <= 20;
     }
 
     //----------------------------------------------------Task 5
@@ -85,8 +84,7 @@ public class FirstLesson {
     //a method that is passed an integer as a parameter. The method should return true if the number is negative,
     //and return false if it is positive.
     private static boolean numberPolarityCheckBoolean (long number) {
-        if (number <= 0 ) return true;
-        else return false;
+        return number <= 0;
     }
 
     //----------------------------------------------------Task 7
