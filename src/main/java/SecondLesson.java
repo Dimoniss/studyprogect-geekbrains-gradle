@@ -51,7 +51,17 @@ public class SecondLesson {
         }
 
         //--------------------Task 5
+        int[] array4 = {34, 3, 547, 12, 45, -66, 0, 1000000, 45, 675, 44 , -11, 221};
+        int min = array4[0];
+        int max = array4[0];
 
+        for (int i = 1; i < array4.length; i++) {
+            if (min > array4[i]) min = array4[i];
+            if (max < array4[i]) max = array4[i];
+        }
 
+        FirstLesson.splitTasks(5);
+        System.out.println(Arrays.toString(array4) + "\n" + "min = " + min + "\n"
+                + "max = " + max);
     }
 }
