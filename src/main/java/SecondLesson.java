@@ -63,5 +63,35 @@ public class SecondLesson {
         FirstLesson.splitTasks(5);
         System.out.println(Arrays.toString(array4) + "\n" + "min = " + min + "\n"
                 + "max = " + max);
+
+        //--------------------Task 6
+        int[] array5 = {4, 8, 0 , 3, 2, 2, 2, 2, 4 , 3};
+        System.out.println(CheckBalanceArray(array5));
+
+
     }
+
+    private static boolean CheckBalanceArray(int[] array) {
+        boolean balanceExist = false;
+
+        //find the sum of all elements in the array
+        int arrSum = 0;
+        for (int i : array) {
+            arrSum += i;
+        }
+
+        //we go through the array again and collect the sum at each iteration (right side of the array)
+        int rightSum = 0;
+        for (int i = 0; i < array.length; i++)
+        {
+            //add the current value to the sum of the right side
+            rightSum += array[i];
+
+            //subtract from the sum of the entire array, the sum of the current right-hand side,
+            //and if they are equal, then the balance has been found.
+            if (rightSum == arrSum - rightSum) balanceExist = true;
+        }
+        return balanceExist;
+    }
+
 }
