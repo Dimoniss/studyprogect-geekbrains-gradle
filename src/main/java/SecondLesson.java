@@ -6,7 +6,6 @@ public class SecondLesson {
 
         //--------------------Task 1
         int[] array = {0, 1, 1, 0, 1, 0, 0 , 0 , 1, 0};
-
         for (int i = 0; i < array.length; i++) {
             switch (array[i]) {
                 case 1 -> array[i] = 0;
@@ -17,9 +16,13 @@ public class SecondLesson {
         System.out.println(Arrays.toString(array));
 
         //--------------------Task 2
-        //test
-        //test 2
-        //test 3
+        int[] array2 = new int[8];
+        int count = 0;
+        for (int i = 0; i < array2.length; i++) {
+            array2[i] = count;
+            count += 3;
+        }
+        System.out.println(Arrays.toString(array2));
 
     }
 }
