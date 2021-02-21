@@ -33,5 +33,25 @@ public class SecondLesson {
         FirstLesson.splitTasks(3);
         System.out.println(Arrays.toString(array3));
 
+        //--------------------Task 4
+        int x = 10;
+        int y = 10;
+        int[][] matrix = new int[y][x];
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[i].length; j++) {
+                matrix[i][j] = 1;
+            }
+        }
+        FirstLesson.splitTasks(4);
+        for (int[] anArr : matrix) {
+            for (int anAnArr : anArr) {
+                System.out.print(anAnArr);
+            }
+            System.out.println();
+        }
+
+        //--------------------Task 5
+
+
     }
 }
