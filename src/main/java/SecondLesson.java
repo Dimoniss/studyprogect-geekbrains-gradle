@@ -66,12 +66,19 @@ public class SecondLesson {
 
         //--------------------Task 6
         int[] array5 = {4, 8, 0 , 3, 2, 2, 2, 2, 4 , 3};
-        System.out.println(CheckBalanceArray(array5));
+        FirstLesson.splitTasks(6);
+        System.out.println(checkBalanceArray(array5));
 
+        //--------------------Task 7
+        int[] array6 = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+        int n = -11;
+
+        FirstLesson.splitTasks(7);
+        System.out.println(Arrays.toString(shift(array6, n)));
 
     }
 
-    private static boolean CheckBalanceArray(int[] array) {
+    private static boolean checkBalanceArray(int[] array) {
         boolean balanceExist = false;
 
         //find the sum of all elements in the array
@@ -94,4 +101,27 @@ public class SecondLesson {
         return balanceExist;
     }
 
+    public static int[] shift(int[] array, int shiftBy)
+    {
+        int[] result = new int[array.length];
+        int count = shiftBy % array.length;
+
+        if(shiftBy > 0) {
+            for (int i = 0; i < array.length; i++) {
+                if (count == array.length) count = 0;
+                result[i] = array[count];
+                count++;
+            }
+        }
+        else if (shiftBy < 0) {
+            for (int i = 0; i < array.length; i++) {
+                if (count == 0) count = -(array.length);
+                result[i] = array[array.length + count];
+                count++;
+            }
+        } else {
+            return array;
+        }
+        return result;
+    }
 }
