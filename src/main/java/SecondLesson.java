@@ -65,7 +65,7 @@ public class SecondLesson {
                 + "max = " + max);
 
         //--------------------Task 6
-        int[] array5 = {4, 8, 0 , 3, 2, 2, 2, 2, 4 , 3};
+        int[] array5 = {4, 8, 0 , 3, 2, 2, 2, 2, 4, 3};
         FirstLesson.splitTasks(6);
         System.out.println(checkBalanceArray(array5));
 
