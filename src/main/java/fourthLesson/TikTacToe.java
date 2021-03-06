@@ -1,3 +1,5 @@
+package fourthLesson;
+
 import java.util.Random;
 import java.util.Scanner;
 
@@ -23,11 +25,11 @@ public class TikTacToe {
             printMap();
 
             if (checkWin(DOT_X)) {
-                System.out.println("Победил человек");
+                System.out.println("YOU WIN!!!");
                 break;
             }
             if (isMapFull()) {
-                System.out.println("Ничья");
+                System.out.println("DRAW");
                 break;
             }
 
@@ -35,16 +37,16 @@ public class TikTacToe {
             printMap();
 
             if (checkWin(DOT_O)) {
-                System.out.println("Победил искуственный интелект");
+                System.out.println("YOU LOSS!!!");
                 break;
             }
             if (isMapFull()) {
-                System.out.println("Ничья");
+                System.out.println("DRAW");
                 break;
             }
         }
 
-        System.out.println("Игра закончилась!");
+        System.out.println("GAME OVER");
     }
 
     public static boolean isMapFull(){
@@ -60,16 +62,47 @@ public class TikTacToe {
     }
 
     public static boolean checkWin(char symb) {
-        if(map[0][0] == symb && map[0][1] == symb && map[0][2] == symb) return true;
-        if(map[1][0] == symb && map[1][1] == symb && map[1][2] == symb) return true;
-        if(map[2][0] == symb && map[2][1] == symb && map[2][2] == symb) return true;
-        if(map[0][0] == symb && map[1][0] == symb && map[2][0] == symb) return true;
-        if(map[0][1] == symb && map[1][1] == symb && map[2][1] == symb) return true;
-        if(map[0][2] == symb && map[1][2] == symb && map[2][2] == symb) return true;
-        if(map[0][0] == symb && map[1][1] == symb && map[2][2] == symb) return true;
-        if(map[2][0] == symb && map[1][1] == symb && map[0][2] == symb) return true;
+        int leftDiagonalCount = 0;
+        int rightDiagonalCount = 0;
+
+        for (int i = 0; i < SIZE; i++) {
+            int horizontalCount = 0;
+            int verticalCount = 0;
+
+            for (int j = 0; j < SIZE; j++) {
+                if (map[i][j] == symb){
+                    if (++horizontalCount == DOTS_TO_WIN) return true;
+                } else {
+                    horizontalCount = 0;
+                }
+
+                if (map[j][i] == symb) {
+                    if (++verticalCount == DOTS_TO_WIN)
+                        return true;
+                } else {
+                    verticalCount = 0;
+                }
+            }
+
+            if (map[i][i] == symb){
+                leftDiagonalCount++;
+            } else {
+                leftDiagonalCount = 0;
+            }
+            if (map[i][SIZE-2] == symb){
+                rightDiagonalCount++;
+            } else {
+                rightDiagonalCount = 0;
+            }
+            if (leftDiagonalCount == SIZE || rightDiagonalCount == SIZE) return true;
+
+        }
+
         return false;
     }
+
+
+
 
     public static void aiTurn() {
         int x, y;
@@ -79,15 +112,16 @@ public class TikTacToe {
             y = random.nextInt(SIZE);
         } while (!isCellValid(x, y));
 
-        System.out.println("Компьютер походил в точку " + (x + 1) + " " + (y + 1));
+        System.out.println("The computer was like a point " + (x + 1) + " " + (y + 1));
         map[y][x] = DOT_O;
     }
+
 
     public static void humanTurn() {
         int x, y;
 
         do {
-            System.out.println("Введите координаты в формате X Y");
+            System.out.println("Enter coordinates in the format X Y");
             x = sc.nextInt() - 1;
             y = sc.nextInt() - 1;
         } while (!isCellValid(x, y));
