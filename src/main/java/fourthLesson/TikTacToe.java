@@ -101,9 +101,6 @@ public class TikTacToe {
         return false;
     }
 
-
-
-
     public static void aiTurn() {
         int x, y;
 
@@ -115,7 +112,6 @@ public class TikTacToe {
         System.out.println("The computer was like a point " + (x + 1) + " " + (y + 1));
         map[y][x] = DOT_O;
     }
-
 
     public static void humanTurn() {
         int x, y;
