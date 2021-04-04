@@ -1,10 +1,15 @@
-package sevenLesson;
+package javaPart1.sevenLesson;
 
 public class Cat extends Animal implements Eat {
 
 
     public Cat(String name, int appetite) {
         super(name, appetite);
+    }
+
+    @Override
+    public void setName(String name) {
+        super.setName(name);
     }
 
     @Override

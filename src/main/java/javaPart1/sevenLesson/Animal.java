@@ -1,4 +1,4 @@
-package sevenLesson;
+package javaPart1.sevenLesson;
 
 public abstract class Animal {
     private String name;

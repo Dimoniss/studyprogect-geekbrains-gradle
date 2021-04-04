@@ -1,4 +1,4 @@
-
+package javaPart1;
 
 public class FirstLesson {
 

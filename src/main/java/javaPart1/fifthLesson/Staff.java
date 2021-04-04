@@ -1,4 +1,4 @@
-package fifthLesson;
+package javaPart1.fifthLesson;
 
 public class Staff {
     private String name, lastname, patronymic, position;

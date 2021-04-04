@@ -1,12 +1,12 @@
-package sevenLesson;
+package javaPart1.sevenLesson;
 
 public class Main {
     public static void main(String[] args) {
         Cat[] cats = {new Cat("Barsik", 15),
-                      new Cat("Bober", 10),
-                      new Cat("Ben", 12),
-                      new Cat("Jesika", 14),
-                      new Cat("Kefir", 22)};
+                new Cat("Bober", 10),
+                new Cat("Ben", 12),
+                new Cat("Jesika", 14),
+                new Cat("Kefir", 22)};
 
         Plate plate = new Plate(50);
         plate.info();
@@ -20,8 +20,13 @@ public class Main {
             System.out.println();
         }
 
-        plate.addFood(30);
-        plate.info();
+        byte a = 127;
+        a++;
+        System.out.println(a);
+
+        String st1;
 
     }
+    
+
 }

@@ -1,4 +1,4 @@
-package fifthLesson;
+package javaPart1.fifthLesson;
 
 public class Main {
     public static void main(String[] args) {
