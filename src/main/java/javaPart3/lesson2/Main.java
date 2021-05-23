@@ -14,10 +14,13 @@ public class Main {
     }
 
     public static void main(String[] args) {
+
+
         try(Connection postgresConnection = DriverManager.getConnection("jdbc:postgresql://localhost:5432/history_of_orders", "postgres", "Progreess1122")) {
 
             Statement ordersStatement = postgresConnection.createStatement();
             PreparedStatement orderPreparedStatement = postgresConnection.prepareStatement("insert into orders(order_id, client_id, date, manager, car, tasks) values (?, ?, ?, ?, ?, ?)");
+
             ResultSet resultSet = ordersStatement.executeQuery("select * from orders");
 
             while (resultSet.next()) {
